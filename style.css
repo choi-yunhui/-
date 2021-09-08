@@ -1,0 +1,214 @@
+/*
+h1{
+	font-size:80px;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+header{
+	color: red;
+}
+header h1,footer h1{
+	color: blue;
+}
+
+header p,footer p{
+	color: green;
+}
+*/
+
+
+
+
+
+/*
+
+
+h1{
+	color: red;
+}
+
+#test1 {
+	color: blue;
+
+}
+
+.test2 {
+	color: green;
+}
+
+input[type="text"]{
+     border: solid 10px red;
+}
+input[type="password"]{	
+     border: solid 10px blue;
+}
+
+*/
+
+
+/*
+.bg-1{
+	background-color: red;
+}
+
+.fontsize-1{
+	font-size: 50px;
+}
+
+
+#color-1 {
+	color: red;
+}
+
+#font-style-1{
+	font-style: italic;
+}
+*/
+
+/*
+#intro h2 {
+	color: red;
+}
+#intro .container P {
+	color: blue;
+}
+*/
+/*
+#color-2{
+	color: pink;
+}
+.color-1 {
+	color: green;
+}
+
+h1{
+	color: red;
+}
+h1{
+	color: blue;
+}
+*/
+
+/*
+#intro .container h1 {
+	color: pink;
+}
+
+#intro div h1 {
+	color: green;   /*디테일할수록우선순위높음*/
+}
+/*
+#intro h1{
+	color: blue;
+}
+
+header h1{
+	color: red;
+}
+
+/
+
+/*캐스케이딩은 원본코드 유지한 상태에서 디자인 변경할 때사용*/
+
+
+
+
+
+
+
+
+/*
+
+
+div {
+    width: 100%;
+	height: 300%;
+    
+    min-width:300px;
+    max-width: 800px; 
+	
+    border: solid 10px red;
+    border-radius: 50px;
+	background-color: yellow;
+
+
+}  /*색이안나옴*/
+/*
+h1{
+	color: blue;
+	font-size: 80px;
+	font-style: italic;
+	font-family: font-family: Noto Sans KR, sans-serif;
+    font-weight: 100;
+    text-decoration: underline;
+    text-decoration: line-through;
+    text-align:center;
+    background-color: pink;
+    opacity: 0.5;
+}
+ul{
+	list-style: none;
+}
+/
+
+/*a{
+	text-decoration: none;  /*밑줄수정용*/
+} 
+/
+
+/*브라우저마다 적용가능한폰트가다름,마지막은항상sanshrif사용*/
+
+
+#bg {
+	width: 900px;
+	height: 900px;
+	background-color:yellow;
+	background-image:url(icon.png) ;
+	background-repeat: no-repeat;
+    background-position: top left;
+
+}
+/*여기도 안나옹/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
