@@ -1,0 +1,35 @@
+
+
+
+html,body{
+	margin: 0;
+	padding: 0;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: #000000;
+}
+
+.mouse-animation li{
+      width: 250px;
+      background-color: rgba(0, 0, 0, 1);
+      padding: 20px;
+
+      border-top: solid 5px #dfdfdf;
+      transition: pacity 0.2s, margin-left 0.5s;
+}
+
+.mouse-animation li:hover{
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-left: 10px;
+}
+
+.mouse-animation li a{
+	color: red;
+	font-size: 20px;
+}
