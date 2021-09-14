@@ -1,0 +1,106 @@
+/*intro*/
+
+#intro .introwrap .lion {
+	animation: spinlion 1500ms linear infinite alternate;
+}
+
+@keyframes spinlion {
+	from {
+		transform: rotate(-10deg);
+	}
+
+	to {
+		transform: rotate(10deg);
+	}
+}
+
+#intro .introwrap .rabbit {
+	animation: spinrabbit 1500ms linear infinite alternate;
+}
+
+@keyframes spinrabbit {
+	from {
+		transform: rotate(-10deg);
+	}
+
+	to {
+		transform: rotate(10deg);
+	}
+}
+
+
+
+#intro .introwrap .bear {
+	animation: spinbear 1000ms linear infinite alternate;
+}
+
+@keyframes spinbear {
+	from {
+		transform: rotate(10deg);
+	}
+
+	to {
+		transform: rotate(-10deg);
+	}
+}
+
+#intro .introwrap .monkey {
+	animation: spinmonkey 800ms linear infinite alternate;
+}
+
+@keyframes spinmonkey {
+	from {
+		transform: rotate(20deg);
+	}
+
+	to {
+		transform: rotate(50deg);
+	}
+}
+
+#intro .cloudwrap .dragonfly {
+	animation: flydragonfly linear 7s infinite;
+}
+
+@keyframes flydragonfly {
+	from{
+		left: -366px;
+	}
+
+	to {
+		left: 100%;
+	}
+}
+
+/*화면밖으로 사라지고 바로나와야하므로px말고 100% 사용*/
+
+
+
+#farm3 .machineWrap .timer {
+	animation: rotateTimer 10000ms linear infinite;
+}
+
+@keyframes rotateTimer {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg);  }
+}
+
+
+#farm3 .machineWrap .saw1 {
+	animation: rotateLeftSaw 10000ms linear infinite;
+}
+
+@keyframes rotateLeftSaw {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg);  }
+}
+
+
+#farm3 .machineWrap .saw2 {
+	animation: rotateRightSaw 10000ms linear infinite;
+}
+
+@keyframes rotateRightSaw {
+	from { transform: rotate(360deg); }
+	to { transform: rotate(0deg);  }
+}
