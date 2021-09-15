@@ -1,0 +1,38 @@
+
+
+.friends-lists {
+	list-style: none;
+}
+
+.friends-list a {
+	color: #000000;
+	text-decoration: none;
+}
+/*왜 a코드의 속성을 바꾸기 위해 ul,li의 클래스가 모두 필요한지?
+아님, 필요한거만적어도됨*/
+/*a 코드는 태생적으로 파랑과밑줄, 위는 검은색 헥사코드임*/
+
+.friend-thumbnail {
+border: solid 2px gray;
+
+border-radius: 20px;
+/*원형은50px*/
+}
+
+.friend-name{
+font-size: 20px;
+color: #000000;
+}
+
+.friend-intro{
+font-size: 15px;
+color: #c8c8c8;
+}
+
+
+/*custom*/
+.friend-name{
+font-size: 20px;
+color: red;
+
+
