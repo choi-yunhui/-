@@ -1,762 +1,220 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
+
 	box-sizing: border-box;
 }
 
-html,body{
+html, body {
 	width: 100%;
 	height: 100%;
+	background-color: #212121;
 }
 
-body{
-	background-color: #0e0e10;
-}
-
-ol,ul{
+ol, ul {
 	list-style: none;
 }
 
-a{
-	text-decoration: none;  
-	                                
+a {
+	text-decoration: none;
 }
 
-img{
-	vertical-align: top;                   /*??*/
+img {
+	vertical-align: middle;
 }
 
-
-input{
-	outline: none;
-	border: none;
-}
-
-button{
-	border: none;
-	outline: none;
+button {
 	background-color: transparent;
+	border: none;
 }
 
-h1,h2,h3,h4,h5,h6,a,span,p,a{
-	color: #ffffff;
+input {
+	outline: none;
+	border: none;
 }
 
-.btn-purple{
-	background-color:#9147ff;
-	color:#ffffff;
+input:focus {
+	outline: none;
 }
 
-.font-purple{
-	color: #9147ff;
+#wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-width: 1320px;
 }
 
-
-
-/*상단nav영역*/
-#top-nav{
-	position: fixed;                       /* position: fixed;사용시 width: 100%; 같이해야함. 안그러면 컨텐츠값으로크기가결정됨  */                                                 
-	width: 100%;                           
-	height: 50px;
-	background-color: #0e0e10;
-	padding: 0 15px;
-	min-width: 1340px;                    /* 아래컨테이너와동일한크기*/
-}
-
-#top-nav .nav-wrap{
-    display: flex;
+.flex-align-between {
+	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	align-content: stretch;
 }
 
-#top-nav .nav-wrap .nav-left{
-    display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-	
-}
-
-#top-nav .nav-wrap .nav-left .logo{
-
-}
-
-#top-nav .nav-wrap .nav-left .logo a{
-
-}
-
-#top-nav .nav-wrap .nav-left .logo a img{
- width: 24px;
- height: 28px;
-}
-
-#top-nav .nav-wrap .nav-left ul{
-    display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-#top-nav .nav-wrap .nav-left ul li{
-  height: 50px;
-  font-size: 20px;
-  padding: 0 20px;
-}
-
-#top-nav .nav-wrap .nav-left ul li a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    line-height: 50px;                        /*  y축 중앙정렬*/
-
-
-}
-
-
-
-#top-nav .nav-wrap .nav-left ul li:first-child{
-   padding-right: 0;
-}
-
-#top-nav .nav-wrap .nav-left ul li:first-child a:after{
-	position: relative;
-	display: inline-block;   
-    content: "";
-    width: 1px;
-    height: 30px;
-    background-color: grey;
-    margin-left: 20px;
-    top: 8px;
-
-}
-
-
-
-
-
-
-#top-nav .nav-wrap .nav-left .more a{
-	/* color: #ffffff; */
-	display: block;
-	height: 50px;
-    font-size: 20px;
-    line-height: 50px;
-    padding-left: 20px;
-}
-
-
-
-
-#top-nav .nav-center{
-	position: absolute;      /*검색바 정확한 중앙정렬위해 포지션변경*/
-    left: 50%;
-    transform: translateX(-50%);  
-  
-}
-
-#top-nav  .nav-center .search-wrap{
-   
-   
-   
-
-
-    display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;              /*버튼정렬위해 flex사용 */        
-	align-items: center;
-	
-
-	overflow: hidden;
-    width: 380px;
-    height: 36px;
-    border-radius:5px ;
-	background-color: yellow;
-    
-}
-
-#top-nav .nav-center .search-wrap input{
-   width: calc(100% - 34px);
-   height: 100%;
-   background-color: grey;
-}
-
-#top-nav .nav-center .search-wrap .btn-search{
-  width: 34px;
-  height: 100%;
-  background-color: darkgrey;
-}
-
-
-#top-nav .nav-right{
-
+.flex-align-start {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+}
+
+.flex-align-end {
+	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-end;
 	align-items: center;
-
+	align-content: stretch;
 }
 
-#top-nav .nav-right .mark-wrap{
-    position: relative;
+
+
+
+
+/* 상단 메뉴 */
+
+
+#youtube-top-nav {
+	position: fixed;
+
+	width: 100%;
+	height: 56px;
+	background-color: #212121;
+
+	padding: 0 16px;
+
+	z-index: 99999;
 }
 
-#top-nav .nav-right .mark-wrap .icon-mark{
-	display: block;
-	width: 20px;
-	height: 20px;
+
+#youtube-top-nav .nav-left {
+	height: 56px;
+}
+
+#youtube-top-nav .nav-left .btn-menu {
+	width: 24px;
+	height: 24px;
 	background-color: yellow;
-	cursor: pointer;
-
-	
-}
-
-#top-nav .nav-right .mark-wrap .alarm{
-	position: absolute;
-	border-radius: 15px;
-	background-color: red;
-	color: #ffffff;
-	font-size: 14px;
-
-	padding: 4px 8px 2px;
-	top: -12px;
-	right: -20px;
-}
-
-#top-nav .nav-right .btn-login{
-    margin-left: 20px;
-    width: 53px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: grey;
-    text-align: center;
-    line-height: 30px;
-    font-size: 12px;
-}
-
-#top-nav .nav-wrap .nav-right .btn-purple{
-     margin-left: 10px;
-     width: 53px;
-     height: 30px;
-     border-radius: 5px;
-     text-align: center;
-     line-height: 30px;
-     font-size: 12px;
-}
-
-#top-nav .nav-wrap .nav-right .btn-profile{
-     margin-left: 10px;
-     width: 20px;
-     height: 20px;
-     background-color: #ffffff;
-     cursor: pointer;
-}
-
-.main-container{
-	/*padding-top: 50px;*/  
-	position: relative;                            /*  top-nav만큼공간 만듬*/
-    width: 100%;
-	height: 100%;
-	min-width: 1340px;
-}
-
-.left-area{
-     position: fixed;
-     width: 240px;
- 
-     background-color: #202024;
-
-     top: 50px;                              /* 1.nav만큼 아래이동 2.fixed, tob bottom을 사용함으로써 강제로 늘려주어 height사용하지않고높잇값을 풀사이즈로 고정함                                            3.이는 순수3차원 포지션에서만 적용됨  */
-     bottom: 0;
-     left: 0;
-
-     overflow-y: auto;                  /* 이 부분만 스크롤만들기*/
-}
-
-.content{
-
 
 }
 
-
-
-.left-area .channel-wrap .channel-header{
-   padding: 10px;
-
-    display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
+#youtube-top-nav .nav-left h1 {
+	margin-left: 16px;
 }
 
-.left-area .channel-wrap .channel-header h3{
-	font-size: 15px;
-	color: #ffffff;
-}
-
-.left-area .channel-wrap .channel-header .icon-arrow{
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	background-color: white;
-}
-
-.left-area .channel-wrap .channel-body{
+#youtube-top-nav .nav-left h1 a {
 
 }
 
-.left-area .channel-wrap .channel-body ul{
+#youtube-top-nav .nav-left h1 img {
+	width: 90px;
+	height: 20px;
 
 }
 
-.left-area .channel-wrap .channel-body ul li{
-
+#youtube-top-nav .nav-right {
+	height: 56px;
 }
 
-.left-area .channel-wrap .channel-body  a{
-  
-   padding: 5px 10px;
-
-   display: flex;
-   flex-wrap: wrap;
-   align-items: flex-start;
-}
-
-.left-area .channel-wrap .channel-body ul li a img{
-   border-radius: 50%;
-   width: 30px;
-   height: 30px;
-}
-
-.left-area .channel-wrap .channel-body ul li a .text-wrap{
-  width: 110px;
-  margin-left: 10px;
-}
-
-.left-area .channel-wrap .channel-body ul li a .text-wrap h4{
-  font-size: 13px;
-}
-
-.left-area .channel-wrap .channel-body .count{
-  display: block;
-  width: 53px; 	                                  
-  font-size: 12px;             
-  color: grey;
-}
-
-.left-area .channel-wrap .channel-body .count:before {
-	position: relative;
-	top: 1px;
-	display: inline-block;
-	content: '';
-	width: 10px;
-	height: 10px;
-	background-color: red;
-	border-radius: 50%;
-	margin-right: 5px;
-}
-
-.left-area .channel-wrap .channel-body ul li a .text-wrap .source{
-  font-size: 12px;
-  color:grey
-}
-
-.left-area .join-wrap{
-  margin: 10px;
-}
-
-.left-area .join-wrap .txt-wrap{
- padding: 20px;
- background-color: #18181a;
-}
-
-.left-area .join-wrap .txt-wrap h2{
- font-size: 24px;
- color: #ffffff;                 /*이전기본코드왜안되지? >중간에 바꾼 적 있어서*/
-} 
-
-.left-area .join-wrap .txt-wrap h2 span{
-
-}
-
-.left-area .join-wrap .txt-wrap p{
- font-size: 13px;
- color: grey;
- margin-top: 10px;
-}
-
-.left-area .join-wrap .txt-wrap .btn-purple{
-	margin-top: 10px;
-    width: 53px;
-    height: 30px;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 12px;
-
-}
-
-.left-area .info-wrap{
-  font-size: 12px;
-  color: grey;
-  margin: 0 10px 10px 10px;
-}
-
-.left-area .info-wrap p{
-	color: grey;
-
-}
-
-.left-area .info-wrap ul{
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
- /* justify-content: flex-start; 이것도기본값임*/
-  align-items: center;
-
-}
-
-.left-area .info-wrap li{
-
-}
-
-.left-area .info-wrap li a{
-   color: grey;                            /*a태그 폰트컬러는 직접선택해줘야하니까 표기함*/
-}
-
-.left-area .info-wrap li a:after{             /*왜li 아니고 a*/
-  position: relative;	                    /*왜*/
-  display: inline-block;                        
-  content: '';
-  width: 2px;
-  height: 10px;
-  background-color: grey;
-
-  margin:0 5px ;
-}
-
-.left-area .info-wrap li:last-child a:after{              /*비포애프터선택자 다시보기    */     
- content: none;
-}
-
-
-
-
-.content {
-	overflow-y: auto;
-	position: absolute;
-	top: 50px;
-	left: 240px;
-  	
-  	bottom: 0;
-  	right: 0;
-}
-
-.content h1 {
-	font-size: 40px;
-}
-
-.content #content-banner {
-	position: relative;
-	width: 100%;
-	height: 350px;
-	background: url('../img/notebook.jpg') no-repeat center;
-	background-size: cover;
-}
-
-.content #content-banner .layer {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-
-	top: 0;
-	left: 0;
-}
-
-.content #content-banner .layer .txt-wrap {
-	position: absolute;
-	top: 170px;
-	right: 200px;
-}
-
-
-.content .content-container {
-	width: 1240px;
-	margin: 0 auto;
-}
-
-
-
-/* 태그 디폴트 */
-.content-container .tag-wrap {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	margin-top: 5px;
-}
-
-.content-container .tag-wrap .tag {
-	font-size: 12px;
-	color: #ffffff;
-	background-color: grey;
-	border-radius: 8px;
-
-	padding: 2px 4px 0;
-
-	margin-right: 5px;
-}
-
-.content-container .tag-wrap .tag:last-child {
-	margin-right: 0;
-}
-
-.content-container .txt-wrap {
-
-}
-
-.content-container .txt-wrap h3 {
-	font-size: 16px;
-}
-
-
-
-
-/* 비디오 섹션 */
-.video-section {
-	position: relative;
-	padding-top: 60px;
-	padding-bottom: 40px;
-
-	border-bottom: solid 1px grey;
-}
-
-.video-section .title-wrap {
-	padding-bottom: 10px;
-}
-
-.video-section .title-wrap h2 {
-	font-size: 20px;
-}
-
-.video-section .video-wrap {
-
-}
-
-.video-section .video-wrap ul {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: flex-start;
-}
-
-.video-section .video-wrap li {
-	width: 333px;
-}
-
-.video-section .video-wrap a {
-	
-}
-
-.video-section .video-wrap .image-wrap{
-	position: relative;
-	width: 333px;
-	height: 186px;
-	background-color: #9147ff;
-}
-
-.video-section .video-wrap .image-wrap img {
-	width: 100%;
-	height: 100%;
-
-	transition: transform 0.15s linear;
-}
-
-.video-section .video-wrap .image-wrap:hover img {
-	transform: translate(10px, -10px);
-}
-
-.video-section .video-wrap .image-wrap .mark{
-	position: absolute;
-
-	top: 15px;
-	left: 15px;
-
-	border-radius: 5px;
-	background-color: red;
-
-	padding: 2px 4px 0;
-
-	font-size: 14px;
-}
-
-.video-section .video-wrap .video-bottom {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: flex-start;
-
-	margin-top: 10px;
-}
-
-.video-section .video-wrap .video-bottom .thumbnail {
+#youtube-top-nav .nav-right .btn-menu {
 	width: 40px;
 	height: 40px;
+	margin-right: 16px;
 }
 
-.video-section .video-wrap .video-bottom .txt-wrap {
-	width: calc(100% - 50px);
+#youtube-top-nav .nav-right .btn-menu.btn-menu-1 {
+	background-color: grey;
 }
 
-.video-section .video-wrap .video-bottom .txt-wrap .source,
-.video-section .video-wrap .video-bottom .txt-wrap .game {
-	font-size: 14px;	
-	color: grey;
+#youtube-top-nav .nav-right .btn-menu.btn-menu-2 {
+	background-color: yellow;
 }
 
-.video-section .btn-more {
+#youtube-top-nav .nav-right .btn-login {
+	display: inline-block;
+	border: solid 1px #3ea6ff;
+	padding: 10px 12px 8px;
+	font-size: 14px;
+
+	color: #3ea6ff;
+}
+
+#youtube-top-nav .nav-center {
 	position: absolute;
-
-	width: 100px;
-	height: 30px;
-	background-color: #0e0e10;
-
-	text-align: center;
-	line-height: 30px;
-
-	bottom: -16px;
 	left: 50%;
 	transform: translateX(-50%);
 }
 
-
-
-
-
-.cateogry-section {
-	padding-top: 60px;
-	padding-bottom: 40px;
+#youtube-top-nav .nav-center .search-wrap {
+	width: 640px;
+	height: 30px;
 }
 
-.cateogry-section .title-wrap {
-	padding-bottom: 10px;
-}
+#youtube-top-nav .nav-center .search-wrap input {
+	width: calc(100% - 65px);
+	height: 30px;
+	border: solid 1px grey;
+	background-color: #212121;
 
-.cateogry-section .title-wrap h2 {
-	font-size: 20px;
-}
+	color: #ffffff;
+	padding: 2px 6px;
 
-.cateogry-section .category-wrap {
-
-}
-
-.cateogry-section .category-wrap ul {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: flex-start;
-}
-
-.cateogry-section .category-wrap li {
-	width: 152px;
-}
-
-.cateogry-section .category-wrap img {
-	width: 152px;
-	height: 203px;
-	margin-bottom: 10px;
-}
-
-.cateogry-section .category-wrap .txt-wrap {
-
-}
-
-.cateogry-section .category-wrap .txt-wrap .count {
-	font-size: 14px;
-	color: grey;
-}
-
-
-footer {
-	width: 100%;
-	padding: 80px 0 150px;
-}
-
-footer .txt-wrap {
-	text-align: center;
-}
-
-footer .txt-wrap p {
 	font-size: 14px;
 }
 
-footer .footer-bottom {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: flex-start;
-	align-content: stretch;
-
-	margin-top: 20px;
-}
-
-footer ul {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: stretch;
-}
-
-footer ul li {
-
-}
-
-footer ul li a {
-	color: grey;
-	font-size: 14px;
-}
-
-footer ul li a:after {
-	content: '';
-	display: inline-block;
-
-	width: 1px;
-	height: 12px;
+#youtube-top-nav .nav-center .search-wrap .btn-search {
+	width: 65px;
+	height: 30px;
+	border: solid 1px grey;
 	background-color: grey;
-
-	margin: 0 8px;
-
-	position: relative;
-	top: 1px;
 }
 
-footer ul li:last-child a:after {
-	content: none;
+#youtube-top-nav .nav-center .btn-voice {
+	width: 24px;
+	height: 24px;
+	background-color: blue;
+
+	margin-left: 16px;
 }
 
 
+#youtube-left-nav {
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: fixed;
+
+	width: 240px;
+	background-color:#212121;
+
+	top: 56px;
+	left: 0;
+	bottom: 0;
+}
+
+#youtube-left-content {
+	position: absolute;
+	width: 225px;
+	height: 100%;
+	background-color: grey;
+}
 
 
+#youtube-main{
+	position: absolute;
+	left: 240px;
+	top: 56px;
+	bottom: 0;
+	right: 0;
+	background-color: #212121;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#youtube-main-content {
+	width: 100%;
+	height: 100%;
+	padding: 24px;
+	background-color: grey;
+}
